@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Café da Terceira Idade · Promessa Vila Camargo</title>
-<meta name="description" content="Inscrição para o Café da Terceira Idade — domingo, 01 de novembro, às 8h30, na Promessa Vila Camargo.">
-<meta property="og:title" content="Café da Terceira Idade · Inscrição">
-<meta property="og:description" content="Domingo, 01/11, às 8h30. Inscreva-se informando só nome e idade.">
-<meta property="og:image" content="https://promessavilacamargo.github.io/cafe-terceira-idade/cafe.jpg">
+<title>Celular na Terceira Idade · Promessa Vila Camargo</title>
+<meta name="description" content="Um dia para aprender a navegar no celular (redes sociais: perigos e orientações) — domingo, 06 de dezembro, às 8h30, na Promessa Vila Camargo. Inscrição R$ 25,00 até 02/12.">
+<meta property="og:title" content="Um dia para aprender a navegar no celular · Inscrição">
+<meta property="og:description" content="Terceira idade · domingo, 06/12, às 8h30. Inscrição R$ 25,00 até 02/12.">
+<meta property="og:image" content="https://promessavilacamargo.github.io/cafe-terceira-idade/celular.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
 
   .header{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);color:#f1ede4;text-align:center;
     background:linear-gradient(180deg,var(--navy-1),var(--navy-2))}
-  .header .photo{height:220px;background:url(cafe.jpg) center 15%/cover;position:relative}
+  .header .photo{height:220px;background:url(celular.jpg) center 12%/cover;position:relative}
   .header .photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,34,56,.15),rgba(30,58,92,0) 45%,var(--navy-1))}
   .header .logo{position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:2;background:rgba(18,34,56,.82);
     border:1px solid rgba(224,160,44,.55);border-radius:999px;padding:8px 20px}
@@ -40,6 +40,10 @@
   .when{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
   .pill{border:1.5px solid #e0a02c;border-radius:14px;padding:8px 16px;font-weight:700;font-size:1.05rem}
   .pill.hl{background:#e0a02c;color:#122238}
+  h1 .h1s{display:block;color:#f1ede4;font-size:.6em;margin-bottom:4px}
+  .tema{font-weight:600;font-size:1.05rem;margin:-4px 0 14px}.tema b{color:#f0bc55}
+  .lead.info{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--ink)}
+  .lead.info a{color:var(--accent-deep);font-weight:700}
   .where{margin-top:14px;font-size:.92rem;color:#cbd6e4}
 
   .card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
@@ -65,16 +69,18 @@
   <header class="header">
     <div class="photo"><div class="logo"><img src="logo.png" alt="Promessa Vila Camargo"></div></div>
     <div class="txt">
-      <div class="eyebrow">Convite especial</div>
-      <h1>Café da<br>Terceira Idade</h1>
-      <div class="when"><span class="pill">Próximo domingo · 01/11</span><span class="pill hl">Às 8h30</span></div>
+      <div class="eyebrow">Terceira idade</div>
+      <h1><span class="h1s">Um dia para aprender</span>a navegar no celular</h1>
+      <div class="tema">Redes sociais: <b>perigos e orientações</b></div>
+      <div class="when"><span class="pill">Domingo · 06/12</span><span class="pill">Às 8h30</span><span class="pill hl">Inscrição R$ 25,00</span></div>
       <div class="where">📍 Promessa Vila Camargo · Av. Florianópolis, 829 – Cajuru</div>
     </div>
   </header>
 
   <section class="card" id="formCard">
     <h2>Faça sua inscrição</h2>
-    <p class="lead">Basta informar o <strong>nome</strong> e a <strong>idade</strong>. Se for inscrever outra pessoa, faça uma inscrição para cada um.</p>
+    <p class="lead">Inscrições <strong>até 02/12</strong>. Basta informar o <strong>nome</strong> e a <strong>idade</strong>. Se for inscrever outra pessoa, faça uma inscrição para cada um.</p>
+    <p class="lead info">Valor da inscrição: <strong>R$ 25,00</strong><br>Responsáveis: Isaías Soares, Marilza Neves e Reginaldo Neves<br>Informações: <a href="https://wa.me/5541996014052">(41) 99601-4052</a></p>
     <form id="regForm">
       <div class="field">
         <label for="nome">Nome completo</label>
@@ -90,16 +96,16 @@
   </section>
 
   <section class="card done" id="doneCard" hidden>
-    <div class="emoji">☕</div>
+    <div class="emoji">📱</div>
     <h2 id="doneTitle">Inscrição feita!</h2>
-    <p>Esperamos você no <strong>domingo, 01/11, às 8h30</strong>, na Promessa Vila Camargo.</p>
+    <p>Esperamos você no <strong>domingo, 06/12, às 8h30</strong>, na Promessa Vila Camargo. Inscrição: R$ 25,00. Dúvidas: (41) 99601-4052.</p>
     <button type="button" class="link-btn" id="againBtn">Inscrever outra pessoa</button>
   </section>
 
 </div>
 <script>
 (function(){
-  // URL /exec do Apps Script da planilha "INSCRIÇÃO CAFÉ DA TERCEIRA IDADE"
+  // URL /exec do Apps Script da planilha "INSCRIÇÃO CAFÉ DA TERCEIRA IDADE" (reaproveitada no evento do celular 06/12)
   var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx_q12VbsuuJdg1hOFtmYZd5auzX7nFZx7vrrXXw95BMHMsfe-zN-9HeH1UMQ_QfwBdDw/exec';
   var form = document.getElementById('regForm');
   var btn = document.getElementById('sendBtn');
