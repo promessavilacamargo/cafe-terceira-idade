@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Celular na Terceira Idade · Promessa Vila Camargo</title>
-<meta name="description" content="Um dia para aprender a navegar no celular (redes sociais: perigos e orientações) — domingo, 06 de dezembro, às 8h30, na Promessa Vila Camargo. Inscrição R$ 25,00 até 02/12.">
-<meta property="og:title" content="Um dia para aprender a navegar no celular · Inscrição">
-<meta property="og:description" content="Terceira idade · domingo, 06/12, às 8h30. Inscrição R$ 25,00 até 02/12.">
-<meta property="og:image" content="https://promessavilacamargo.github.io/cafe-terceira-idade/celular.jpg">
+<title>Café da Terceira Idade · Promessa Vila Camargo</title>
+<meta name="description" content="Café da Terceira Idade — domingo, 06 de dezembro, às 8h30, na Promessa Vila Camargo. Café da manhã especial e um dia para aprender a navegar no celular. Inscrição R$ 25,00 até 02/12.">
+<meta property="og:title" content="Café da Terceira Idade · Inscrição">
+<meta property="og:description" content="Domingo, 06/12, às 8h30. Café da manhã + aprender a navegar no celular. Inscrição R$ 25,00 até 02/12.">
+<meta property="og:image" content="https://promessavilacamargo.github.io/cafe-terceira-idade/cafe.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,40 +15,52 @@
   :root{
     color-scheme: light dark;
     --bg:#f5f3ee; --surface:#ffffff; --ink:#14213d; --muted:#5f6b85; --line:#e4dccb;
-    --accent:#e0a12f; --accent-deep:#9a6a12; --navy-1:#1e3a5c; --navy-2:#122238;
+    --accent:#e0a12f; --accent-deep:#9a6a12; --navy-1:#1e3a5c; --navy-2:#122238; --soft:#fbf6ea;
     --shadow:0 20px 40px -24px rgba(20,33,61,0.35);
   }
   @media (prefers-color-scheme: dark){
-    :root{ --bg:#0e1629; --surface:#16213b; --ink:#f1ede4; --muted:#a9b3c9; --line:#2c3b5e;
+    :root{ --bg:#0e1629; --surface:#16213b; --ink:#f1ede4; --muted:#a9b3c9; --line:#2c3b5e; --soft:#1b2846;
       --accent:#e8b04a; --accent-deep:#e8b04a; --shadow:0 20px 40px -20px rgba(0,0,0,0.55); }
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
-  body{background:var(--bg);color:var(--ink);font-family:"Poppins",system-ui,sans-serif;padding:24px 16px 40px;font-size:18px}
+  body{background:var(--bg);color:var(--ink);font-family:"Poppins",system-ui,sans-serif;padding:20px 16px 40px;font-size:18px;line-height:1.5}
   .page{max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
 
-  .header{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);color:#f1ede4;text-align:center;
+  .header{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);color:#f1ede4;text-align:center;
     background:linear-gradient(180deg,var(--navy-1),var(--navy-2))}
-  .header .photo{height:220px;background:url(celular.jpg) center 12%/cover;position:relative}
+  .header .photo{height:260px;background:url(cafe.jpg) center 20%/cover;position:relative}
   .header .photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,34,56,.15),rgba(30,58,92,0) 45%,var(--navy-1))}
   .header .logo{position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:2;background:rgba(18,34,56,.82);
     border:1px solid rgba(224,160,44,.55);border-radius:999px;padding:8px 20px}
   .header .logo img{height:42px;display:block}
-  .header .txt{padding:0 22px 26px;margin-top:-26px;position:relative}
+  .header .txt{padding:0 22px 26px;margin-top:-30px;position:relative}
   .eyebrow{font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;color:#f0bc55;font-weight:700}
-  h1{font-family:"Playfair Display",Georgia,serif;font-weight:800;font-size:clamp(2.2rem,10vw,3rem);margin:4px 0 14px;line-height:1.05;color:#e8b04a}
+  h1{font-family:"Playfair Display",Georgia,serif;font-weight:800;font-size:clamp(2.4rem,11vw,3.3rem);margin:4px 0 10px;line-height:1.04;color:#e8b04a}
+  .header .intro{color:#dfe7f1;font-size:1.02rem;margin:0 0 18px}
   .when{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
   .pill{border:1.5px solid #e0a02c;border-radius:14px;padding:8px 16px;font-weight:700;font-size:1.05rem}
   .pill.hl{background:#e0a02c;color:#122238}
-  h1 .h1s{display:block;color:#f1ede4;font-size:.6em;margin-bottom:4px}
-  .tema{font-weight:600;font-size:1.05rem;margin:-4px 0 14px}.tema b{color:#f0bc55}
-  .lead.info{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--ink)}
-  .lead.info a{color:var(--accent-deep);font-weight:700}
-  .where{margin-top:14px;font-size:.92rem;color:#cbd6e4}
+  .cta{display:inline-block;margin-top:20px;background:#e0a02c;color:#122238;text-decoration:none;font-weight:700;
+    border-radius:999px;padding:14px 30px;font-size:1.08rem;box-shadow:0 10px 24px -10px rgba(0,0,0,.5)}
+  .prazo{margin-top:10px;font-size:.9rem;color:#cbd6e4}
 
   .card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
-  .card h2{font-family:"Playfair Display",Georgia,serif;font-size:1.5rem;margin:0 0 6px}
-  .card .lead{color:var(--muted);font-size:.95rem;margin:0 0 18px;line-height:1.5}
+  .card h2{font-family:"Playfair Display",Georgia,serif;font-size:1.55rem;margin:0 0 6px;line-height:1.2}
+  .card .lead{color:var(--muted);font-size:1rem;margin:0 0 18px}
+
+  .prog{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:14px}
+  .prog li{display:flex;gap:14px;align-items:flex-start;background:var(--soft);border-radius:16px;padding:14px 16px}
+  .prog .ic{flex:none;width:48px;height:48px;border-radius:14px;background:var(--navy-1);color:#f0bc55;display:grid;place-items:center;font-size:1.5rem}
+  .prog b{display:block;font-size:1.06rem}
+  .prog span{color:var(--muted);font-size:.96rem}
+
+  .info{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+  .info div{background:var(--soft);border-radius:14px;padding:12px 14px}
+  .info i{display:block;font-style:normal;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);font-weight:700}
+  .info b{font-size:1.08rem}
+  .info .full{grid-column:span 2}
+
   .field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
   label{font-weight:600;font-size:1rem}
   input{font-family:inherit;font-size:1.15rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px;width:100%}
@@ -60,6 +72,13 @@
   .done .emoji{font-size:2.8rem}
   .done p{color:var(--muted);line-height:1.55}
   .link-btn{background:none;border:none;color:var(--accent-deep);font-family:inherit;font-weight:600;font-size:1rem;text-decoration:underline;cursor:pointer;padding:8px}
+
+  .resp p{margin:0 0 14px;color:var(--muted)}
+  .resp strong{color:var(--ink)}
+  .wa{display:flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;font-weight:700;
+    border-radius:999px;padding:14px 20px;font-size:1.08rem}
+  .wa svg{flex:none}
+  .verse{text-align:center;color:var(--muted);font-style:italic;font-size:.95rem;padding:4px 12px}
   [hidden]{display:none !important}
 </style>
 </head>
@@ -69,18 +88,38 @@
   <header class="header">
     <div class="photo"><div class="logo"><img src="logo.png" alt="Promessa Vila Camargo"></div></div>
     <div class="txt">
-      <div class="eyebrow">Terceira idade</div>
-      <h1><span class="h1s">Um dia para aprender</span>a navegar no celular</h1>
-      <div class="tema">Redes sociais: <b>perigos e orientações</b></div>
-      <div class="when"><span class="pill">Domingo · 06/12</span><span class="pill">Às 8h30</span><span class="pill hl">Inscrição R$ 25,00</span></div>
-      <div class="where">📍 Promessa Vila Camargo · Av. Florianópolis, 829 – Cajuru</div>
+      <div class="eyebrow">Convite especial</div>
+      <h1>Café da<br>Terceira Idade</h1>
+      <p class="intro">Uma manhã com café especial, boa conversa e um dia para aprender a navegar no celular com segurança.</p>
+      <div class="when"><span class="pill">Domingo · 06/12</span><span class="pill">Às 8h30</span></div>
+      <a class="cta" href="#formCard">Quero me inscrever</a>
+      <div class="prazo">Inscrição R$ 25,00 · até 02/12</div>
     </div>
   </header>
 
+  <section class="card">
+    <h2>Como vai ser a manhã</h2>
+    <ul class="prog">
+      <li><div class="ic">☕</div><div><b>Café da manhã especial</b><span>Preparado com carinho para receber nossos queridos da melhor idade.</span></div></li>
+      <li><div class="ic">📱</div><div><b>Um dia para aprender a navegar no celular</b><span>Com calma e sem pressa, tirando as dúvidas do dia a dia.</span></div></li>
+      <li><div class="ic">🛡️</div><div><b>Redes sociais: perigos e orientações</b><span>Como reconhecer golpes, mensagens falsas e links suspeitos, e como se proteger.</span></div></li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Informações</h2>
+    <div class="info">
+      <div><i>Data</i><b>Domingo, 06/12</b></div>
+      <div><i>Horário</i><b>8h30</b></div>
+      <div><i>Inscrição</i><b>R$ 25,00</b></div>
+      <div><i>Inscrições até</i><b>02/12</b></div>
+      <div class="full"><i>Local</i><b>Promessa Vila Camargo</b><br><span style="color:var(--muted);font-size:.95rem">Av. Florianópolis, 829 – Cajuru · <a href="https://www.google.com/maps/search/?api=1&query=Av.+Florian%C3%B3polis%2C+829+Cajuru+Curitiba" target="_blank" rel="noopener" style="color:var(--accent-deep);font-weight:600">ver no mapa</a></span></div>
+    </div>
+  </section>
+
   <section class="card" id="formCard">
     <h2>Faça sua inscrição</h2>
-    <p class="lead">Inscrições <strong>até 02/12</strong>. Basta informar o <strong>nome</strong> e a <strong>idade</strong>. Se for inscrever outra pessoa, faça uma inscrição para cada um.</p>
-    <p class="lead info">Valor da inscrição: <strong>R$ 25,00</strong><br>Responsáveis: Isaías Soares, Marilza Neves e Reginaldo Neves<br>Informações: <a href="https://wa.me/5541996014052">(41) 99601-4052</a></p>
+    <p class="lead">Basta informar o <strong>nome</strong> e a <strong>idade</strong>. Se for inscrever outra pessoa, faça uma inscrição para cada um.</p>
     <form id="regForm">
       <div class="field">
         <label for="nome">Nome completo</label>
@@ -96,16 +135,27 @@
   </section>
 
   <section class="card done" id="doneCard" hidden>
-    <div class="emoji">📱</div>
+    <div class="emoji">☕</div>
     <h2 id="doneTitle">Inscrição feita!</h2>
-    <p>Esperamos você no <strong>domingo, 06/12, às 8h30</strong>, na Promessa Vila Camargo. Inscrição: R$ 25,00. Dúvidas: (41) 99601-4052.</p>
+    <p>Esperamos você no <strong>domingo, 06/12, às 8h30</strong>, na Promessa Vila Camargo. Inscrição: R$ 25,00.</p>
     <button type="button" class="link-btn" id="againBtn">Inscrever outra pessoa</button>
   </section>
+
+  <section class="card resp">
+    <h2>Dúvidas?</h2>
+    <p>Responsáveis: <strong>Isaías Soares, Marilza Neves e Reginaldo Neves</strong></p>
+    <a class="wa" href="https://wa.me/5541996014052?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Caf%C3%A9%20da%20Terceira%20Idade%20de%2006%2F12." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="24" height="24"><path fill="#fff" d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 2.9 2.9 0 00-.9 2.2 5 5 0 001.1 2.7 11.5 11.5 0 004.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.3-.3-.5-.4z"/></svg>
+      Falar no WhatsApp · (41) 99601-4052
+    </a>
+  </section>
+
+  <p class="verse">"Na velhice ainda darão frutos, serão cheios de seiva e de verdor." Salmos 92:14</p>
 
 </div>
 <script>
 (function(){
-  // URL /exec do Apps Script da planilha "INSCRIÇÃO CAFÉ DA TERCEIRA IDADE" (reaproveitada no evento do celular 06/12)
+  // URL /exec do Apps Script da planilha "INSCRIÇÃO CAFÉ DA TERCEIRA IDADE" (reaproveitada no café de 06/12)
   var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx_q12VbsuuJdg1hOFtmYZd5auzX7nFZx7vrrXXw95BMHMsfe-zN-9HeH1UMQ_QfwBdDw/exec';
   var form = document.getElementById('regForm');
   var btn = document.getElementById('sendBtn');
