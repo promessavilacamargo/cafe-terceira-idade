@@ -81,6 +81,7 @@
   .verse{text-align:center;color:var(--muted);font-style:italic;font-size:.95rem;padding:4px 12px}
   .aviso{background:#fff4dc;border:1px solid #e0a02c;color:#5a3d00;border-radius:12px;padding:12px 14px;margin:0 0 14px;font-size:1rem}
   .mudou{margin:12px auto 0;max-width:420px;background:rgba(224,160,44,.16);border:1px solid rgba(240,188,85,.6);border-radius:12px;padding:10px 14px;font-size:.95rem;font-weight:600;color:#f6e3b4}
+  .copy{margin-left:6px;font-family:inherit;font-size:.85rem;font-weight:700;color:var(--accent-deep);background:none;border:1.5px solid var(--accent);border-radius:999px;padding:3px 12px;cursor:pointer}
   [hidden]{display:none !important}
 </style>
 </head>
@@ -116,6 +117,7 @@
       <div><i>Horário</i><b>8h30</b></div>
       <div><i>Inscrição</i><b>R$ 25,00</b></div>
       <div><i>Inscrições até</i><b>02/12</b></div>
+      <div class="full"><i>Pagamento via Pix (e-mail da igreja)</i><b>iapvc55@gmail.com</b> <button type="button" class="copy" id="copyPix">copiar</button></div>
       <div class="full"><i>Local</i><b>Promessa Vila Camargo</b><br><span style="color:var(--muted);font-size:.95rem">Av. Florianópolis, 829 – Cajuru · <a href="https://www.google.com/maps/search/?api=1&query=Av.+Florian%C3%B3polis%2C+829+Cajuru+Curitiba" target="_blank" rel="noopener" style="color:var(--accent-deep);font-weight:600">ver no mapa</a></span></div>
     </div>
   </section>
@@ -141,7 +143,7 @@
   <section class="card done" id="doneCard" hidden>
     <div class="emoji">🍽️</div>
     <h2 id="doneTitle">Inscrição feita!</h2>
-    <p>Esperamos você no <strong>domingo, 06/12, às 8h30</strong>, na Promessa Vila Camargo. Inscrição: R$ 25,00.</p>
+    <p>Esperamos você no <strong>domingo, 06/12, às 8h30</strong>, na Promessa Vila Camargo. Inscrição: R$ 25,00, pagamento via Pix para <strong>iapvc55@gmail.com</strong>.</p>
     <button type="button" class="link-btn" id="againBtn">Inscrever outra pessoa</button>
   </section>
 
@@ -178,6 +180,10 @@
       })
       .catch(function(){ err.textContent = 'Não foi possível enviar. Verifique a internet e tente de novo.'; err.hidden = false; })
       .then(function(){ btn.disabled = false; btn.textContent = 'Confirmar inscrição'; });
+  });
+
+  document.getElementById('copyPix').addEventListener('click', function(){
+    var b=this; (navigator.clipboard ? navigator.clipboard.writeText('iapvc55@gmail.com') : Promise.reject()).then(function(){ b.textContent='copiado!'; setTimeout(function(){ b.textContent='copiar'; },2000); }).catch(function(){ b.textContent='iapvc55@gmail.com'; });
   });
 
   document.getElementById('againBtn').addEventListener('click', function(){
